@@ -3,7 +3,7 @@
 Plugin Name: Welcome Visitor
 Plugin URI: http://www.kylogs.com/blog/archives/425.html
 Description: welcome the new visitor, and ask him/her to subscribe your feeds :). Go to settings/Welcome Visitor to change the default settings.
-Version: 0.9beta
+Version: 0.92
 Author: Chen Ju
 Author URI: http://www.kylogs.com/blog
 
@@ -31,7 +31,7 @@ Copyright 2008  Chen Ju  (email : sammy105@gmail.com)
 	$defalut=0;
 	
 	
-	add_action('get_header','say_it');
+	add_action('wp_head','say_it');
 	add_action('admin_menu','add_setting_options');
 	
 function setDefault($s){
