@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Welcome Visitor
-Plugin URI: http://www.kylogs.com/blog/welcomevisitor
+Plugin URI: http://www.kylogs.com/blog/archives/425.html
 Description: welcome the new visitor, and ask him/her to subscribe your feeds :). Go to settings/Welcome Visitor to change the default settings.
 Version: 0.9beta
 Author: Chen Ju
