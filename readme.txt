@@ -6,7 +6,7 @@ Requires at least: 2.5.0
 Tested up to: 2.6.0
 Stable tag: 0.91
 
-Welcome-visitor is a wordpress plugin, which will welcome visitors ( who come from others sites, e.g. google search, yahoo! serach or your friends' links), and ask them to bookmark your site or to subscribe your rss feed. It will help you to get more readers and more attention! 
+Welcome-visitor is a wordpress plugin, which will welcome visitors help you to get more readers and more attention! 
 
 == Description ==
 Welcome-visitor is a wordpress plugin, which will welcome visitors ( who come from others sites, e.g. google search, yahoo! serach or your friends' links), and ask them to bookmark your site or to subscribe your rss feed. It will help you to get more readers and more attention! 
@@ -24,6 +24,8 @@ This section describes how to install the plugin and get it working.
    1. If you want to change the default settings, go to settings page,and choose menu Welcome Visitor. 
 
 == Frequently Asked Questions ==
+=Is it necessary to have a Frequently Asked Questions=
+I don't think so :)
 
 == Screenshots ==
 
@@ -36,5 +38,3 @@ This section describes how to install the plugin and get it working.
 
 * 0.9 2008/7/27 first version 
 * 0.91 2008/7/28 0.9version will cause an error in Dashboard->incoming links area. It was fixed in 0.91
-
-
