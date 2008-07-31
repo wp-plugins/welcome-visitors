@@ -31,11 +31,7 @@ I don't think so :)
 
 == Screenshots ==
 
-The screen will appear on your site when new visitor comes.
 1. screenshot-1.jpg
-
-
-The default settings you can modify.
 2. screenshot-2.jpg
 
 
