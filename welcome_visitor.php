@@ -71,16 +71,16 @@ function anay(){
 	 		 		$h_g='<div style="';
 	 		 		$h_g.=get_option('welcome_visitor_css_style'); 
 	 		 		$h_g.=' ">';
-          $h_g.='Welcome friends from';
+          $h_g.='Welcome friend from <strong>';
           $h_g.='<a href=';
           $h_g.="$h_realurl";
           $h_g.='>';         
           $h_g.="$h_sitename";
           $h_g.='</a>';
-          $h_g.=', if you are new here, ';
-          $h_g.='you may want to <a href="';
+          $h_g.='</strong>, if you are new here, ';
+          $h_g.='you may want to <strong><a href="';
           $h_g.=get_option('rss_address');
-          $h_g.='">subscribe</a> this site.</div>';     
+          $h_g.='">subscribe</a></strong> this site.</div>';     
             
 	}
 	return $h_g;
