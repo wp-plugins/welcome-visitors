@@ -74,13 +74,17 @@ function anay(){
           $h_g.='Welcome friend from <strong>';
           $h_g.='<a href=';
           $h_g.="$h_realurl";
-          $h_g.='>';         
+          $h_g.='>';	
           $h_g.="$h_sitename";
           $h_g.='</a>';
           $h_g.='</strong>, if you are new here, ';
           $h_g.='you may want to <strong><a href="';
           $h_g.=get_option('rss_address');
-          $h_g.='">subscribe</a></strong> this site.</div>';     
+          $h_g.='">';
+          $h_g.='<img src="';
+          $h_g.=get_option('siteurl');
+          $h_g.='/wp-content/plugins/welcome-visitors/feed.png" />'; 
+          subscribe</a></strong> this site.</div>';     
             
 	}
 	return $h_g;
@@ -97,7 +101,7 @@ function say_it(){
 	}
 	
 function add_setting_options(){
-		add_options_page('Welcome Visitor', 'Welcome Visitor', 5, 'welcome_visitor/options.php');
+		add_options_page('Welcome Visitor', 'Welcome Visitor', 5, 'welcome-visitors/options.php');
 }		
 function options_page(){
 		// do nothing

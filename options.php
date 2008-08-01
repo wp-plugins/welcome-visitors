@@ -1,29 +1,18 @@
 <?
-	load_plugin_textdomain('welcome_visitor', 'wp-content/plugins/welcome_visitor'); 
+	load_plugin_textdomain('welcome_visitors', 'wp-content/plugins/welcome-visitors'); 
 	include_once('welcome_visitor.php');
 	init_welcome_visitor();
 	wp_nonce_field('update-options') ;
-	//action url
-	//$location = get_option('siteurl') . '/wp-admin/admin.php?page=codecolorer/codecolorer-options.php'; 
 	
 	
 	
-	/* Add some default options if they don't exist */
-	//add_option('codecolorer_line_numbers', false);
 	
-	//add_option('codecolorer_lines_to_scroll', $CodeColorer->getDefaultLinesToScroll());
-	//add_option('codecolorer_line_height', $CodeColorer->getDefaultLineHeight());
-	//add_option('codecolorer_disable_keyword_linking', false);
-	//add_option('codecolorer_tab_size', 4);
 	
 	if ('process' == $_POST['stage']) {
  		 update_option('welcome_visitor_css_style', $_POST['welcome_visitor_css_style']);
  		 update_option('rss_address', $_POST['rss_address']);
  		 
- 		// update_option('codecolorer_line_height', intval($_POST['codecolorer_line_height']));
- 		// update_option('codecolorer_line_numbers', isset($_POST['codecolorer_line_numbers']));
- 		// update_option('codecolorer_disable_keyword_linking', isset($_POST['codecolorer_disable_keyword_linking']));
- 		// update_option('codecolorer_tab_site', intval($_POST['codecolorer_tab_size']));
+ 		
 	}
 	if($_POST[reset_all]==true){
 		reset_all_options();
@@ -32,10 +21,7 @@
 	$rss_address = get_option('rss_address');
 	//echo $rss_address;
 	$welcome_visitor_css_style = get_option('welcome_visitor_css_style');
-	//$codecolorer_lines_to_scroll = stripslashes(get_option('codecolorer_lines_to_scroll'));
-	//$codecolorer_line_height = stripslashes(get_option('codecolorer_line_height'));
-	//$codecolorer_disable_keyword_linking = stripslashes(get_option('codecolorer_disable_keyword_linking'));
-	//$codecolorer_tab_size = stripslashes(get_option('codecolorer_tab_size'));
+	
 	
 ?>
 <div class="wrap"> 
