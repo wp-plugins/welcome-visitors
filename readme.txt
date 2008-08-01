@@ -11,6 +11,8 @@ Welcome-visitor is a wordpress plugin, which will welcome visitors help you to g
 == Description ==
 Welcome-visitor is a wordpress plugin, which will welcome visitors ( who come from others sites, e.g. google search, yahoo! serach or your friends' links), and ask them to bookmark your site or to subscribe your rss feed. It will help you to get more readers and more attention! 
 
+visitor[Plugin Home](http://www.kylogs.com/blog/archives/425.html) for further information!
+
 more wordpress plugins are on the way from [Chen Ju](http://www.kylogs.com.blog) 
 
 == Installation ==
@@ -25,9 +27,11 @@ This section describes how to install the plugin and get it working.
 
 == Frequently Asked Questions ==
 
-=Is it necessary to have a Frequently Asked Questions=
+Is it necessary to have a Frequently Asked Questions
 
 I don't think so :)
+
+visitor[Plugin Home](http://www.kylogs.com/blog/archives/425.html) for further information!
 
 == Screenshots ==
 
