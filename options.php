@@ -11,6 +11,7 @@
 	if ('process' == $_POST['stage']) {
  		 update_option('welcome_visitor_css_style', $_POST['welcome_visitor_css_style']);
  		 update_option('rss_address', $_POST['rss_address']);
+		 update_option('welcome_words',$_POST['welcome_words']);
  		 
  		
 	}
@@ -37,14 +38,26 @@
       <tr valign="top">
         <th scope="row"><label for="welcome_visitor_css_style"><?php _e('CSS Style', 'welcome_visitor') ?>:</label></th>
         <td>
-          <input name="welcome_visitor_css_style" type="text"  size="60" id="welcome_visitor_css_style" value="<?php echo get_option('welcome_visitor_css_style'); ?>"/>
+          <input name="welcome_visitor_css_style" type="text"  size="120" id="welcome_visitor_css_style" value="<?php echo get_option('welcome_visitor_css_style'); ?>"/>
         </td>
       </tr>
      <tr valign="top">
         <th scope="row"><label for="rss_address"><?php _e('Your RSS Address', 'welcome_visitor') ?>:</label></th>
         <td>
-          <input name="rss_address" type="text"  size="60" id="rss_address" value="<?php echo get_option('rss_address')?>"/><br />
+          <input name="rss_address" type="text"  size="100" id="rss_address" value="<?php echo get_option('rss_address')?>"/><br />
           <?php _e('If you are using feedburner feeds or else, you may change the default rss address.') ?>
+  	    </td>
+      </tr>
+	  
+	  <tr valign="top">
+        <th scope="row"><label for="welcome_words"><?php _e('Customize your own welcome words', 'welcome_visitor') ?>:</label></th>
+        <td>
+          <input name="welcome_words" type="text"  size="100" id="welcome_words" value="<?php echo get_option('welcome_words')?>"/><br />
+          <?php _e('Please be careful to modify this option.') ?>
+		  <?php _e('[REFERER_URL] is the url where the visitor come from, ') ?>
+		  <?php _e('[RE_SITENAME] is the site name where the visitor come from, ') ?>
+		  <?php _e('[RSS_ADDRESS] your rss address, ') ?>
+		  <?php _e('[IMG] is the url of your feed img. ') ?>
   	    </td>
       </tr>
      <tr valign="top">

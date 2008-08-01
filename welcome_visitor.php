@@ -33,22 +33,32 @@ Copyright 2008  Chen Ju  (email : sammy105@gmail.com)
 	
 	add_action('wp_head','say_it');
 	add_action('admin_menu','add_setting_options');
+	init_welcome_visitor();
 	
 function setDefault($s){
 	$defalut=$s;
 }
 function init_welcome_visitor(){
+    $h_t='Welcome friend from <strong> <a href=[REFERER_URL] >[RE_SITENAME]</a></strong>, if you are new here, ';
+	$h_t.='you may want to <strong> <a href=[RSS_ADDRESS] >[IMG]subscribe</a></strong> this site.';
 	add_option('welcome_visitor_css_style',DefaultStyle());
 	add_option('rss_address',get_option('siteurl').'/wp-feed.php');
+	add_option('welcome_words',$h_t);
+	add_option('default',0);
+	//echo(get_option('welcome_words'));
 }
 function DefaultStyle(){
 	$v_style='background-color: white;border-color: purple;	border-style: dashed;	border-width: 0.5pt;bottom: 5pt;left: 5pt;margin-bottom: 15pt;padding: 10pt;right: 5pt;	top: 5pt;';
 	return $v_style;
 }
 function reset_all_options(){
+		
+		$h_t='Welcome friend from <strong> <a href=[REFERER_URL] >[RE_SITENAME]</a></strong>, if you are new here, ';
+	    $h_t.='you may want to <strong><a href=[RSS_ADDRESS] >[IMG] subscribe</a></strong> this site.';
 		update_option('welcome_visitor_css_style', DefaultStyle());
 		update_option('default',0);
 		update_option('rss_address',get_option('siteurl').'/wp-feed.php');
+		update_option('welcome_words',$h_t);
 }
 function anay(){
 	$h_url=$_SERVER['HTTP_REFERER'];
@@ -67,24 +77,32 @@ function anay(){
         
    	if(strpos($h_realurl,$h_hostname)<=0){
 			/* if user is from outside world */
-			
-	 		 		$h_g='<div style="';
+			$h_img='<img src="';
+			$h_img.=get_option('siteurl').'/wp-content/plugins/welcome-visitors/feed.png"/>';
+			$temp=get_option('welcome_words');
+			$temp=str_replace("[REFERER_URL]","$h_realurl","$temp");
+			$temp=str_replace("[RE_SITENAME]","$h_sitename","$temp");
+			$temp=str_replace('[RSS_ADDRESS]',get_option('rss_address'),"$temp");
+			$temp=str_replace("[IMG]","$h_img","$temp");
+	 		$h_g='<div style="';
 	 		 		$h_g.=get_option('welcome_visitor_css_style'); 
 	 		 		$h_g.=' ">';
-          $h_g.='Welcome friend from <strong>';
-          $h_g.='<a href=';
-          $h_g.="$h_realurl";
-          $h_g.='>';	
-          $h_g.="$h_sitename";
-          $h_g.='</a>';
-          $h_g.='</strong>, if you are new here, ';
-          $h_g.='you may want to <strong><a href="';
-          $h_g.=get_option('rss_address');
-          $h_g.='">';
-          $h_g.='<img src="';
-          $h_g.=get_option('siteurl');
-          $h_g.='/wp-content/plugins/welcome-visitors/feed.png" />'; 
-          subscribe</a></strong> this site.</div>';     
+			$h_g.=$temp;
+        //  $h_g.='Welcome friend from <strong>';
+       //   $h_g.='<a href=';
+       //   $h_g.="$h_realurl";
+      //    $h_g.='>';	
+       //   $h_g.="$h_sitename";
+       //   $h_g.='</a>';
+      //    $h_g.='</strong>, if you are new here, ';
+      //    $h_g.='you may want to <strong><a href="';
+      //    $h_g.=get_option('rss_address');
+      //    $h_g.='">';
+      //    $h_g.='<img src="';
+     //     $h_g.=get_option('siteurl');
+     //     $h_g.='/wp-content/plugins/welcome-visitors/feed.png" />'; 
+      //    subscribe</a></strong> this site.</div>';     
+	      $h_g.='</div>';
             
 	}
 	return $h_g;

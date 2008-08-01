@@ -4,7 +4,7 @@ Donate link: http://www.kylogs.com/blog/archives/425.html
 Tags: rss, welcome visitors,hello,post
 Requires at least: 2.5.0
 Tested up to: 2.6.0
-Stable tag: 0.93
+Stable tag: 1.00
 
 Welcome-visitor is a wordpress plugin, which will welcome visitors help you to get more readers and more attention! 
 
@@ -40,5 +40,6 @@ I don't think so :)
 
 * 0.9 2008/7/27 first version 
 * 0.91 2008/7/28 0.9version will cause an error in Dashboard->incoming links area. It was fixed in 0.91
-* 0.92 fix some bugs
-* 0.93 fix a serious bug, add a small feed img
+* 0.92 2008/7/30 fix some bugs
+* 0.93 2008/7/31 fix a serious bug, add a small feed img
+* 1.00 2008/8/1 now you can custome your own welcome words. :)
