@@ -3,7 +3,7 @@
 Plugin Name: Welcome Visitor
 Plugin URI: http://www.kylogs.com/blog/archives/425.html
 Description: welcome the new visitor, and ask him/her to subscribe your feeds :). Go to settings/Welcome Visitor to change the default settings.
-Version: 1.00
+Version: 1.01
 Author: Chen Ju
 Author URI: http://www.kylogs.com/blog
 
@@ -67,8 +67,8 @@ function anay(){
 	$h_hostname=getHostname();
         $h_realurl='http://';
 	$h_urls=parse_url($h_url);
-        $h_realurl.=$h_urls[host];
-        $h_sitename=$h_urls[host];
+        $h_realurl.=$h_urls['host'];
+        $h_sitename=$h_urls['host'];
         if($h_sitename=='www.baidu.com') $h_sitename='Baidu';
         if($h_sitename=='www.google.com') $h_sitename='Google';
         if($h_sitename=='www.sina.com.cn') $h_sitename='Sina';
@@ -110,7 +110,7 @@ function anay(){
 /* return the current site's hostname*/
 function getHostname(){
 	$temp=parse_url(get_option('siteurl'));
-        return $temp[host];
+        return $temp['host'];
 }
 function say_it(){    
 	echo anay();
