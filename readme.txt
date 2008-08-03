@@ -13,7 +13,7 @@ Welcome-visitor is a wordpress plugin, which will welcome visitors ( who come fr
 
 visitor[Plugin Home](http://www.kylogs.com/blog/archives/425.html) for further information!
 
-more wordpress plugins are on the way from [Chen Ju](http://www.kylogs.com.blog) 
+more wordpress plugins are on the way from [Chen Ju](http://www.kylogs.com/blog) 
 
 == Installation ==
 
@@ -21,7 +21,7 @@ This section describes how to install the plugin and get it working.
 
    1. Download the plugin
    1. Unachive it
-   1. Upload to wp-content/plugins/
+   1. Upload to wp-content/plugins/   Be careful here, you should upload the folder **welcome-visitors** and make sure the plugin files (*welcome_visitor.php, options.php, feed.png*) are directly in the folder.
    1. Login to plugin page and activate it
    1. If you want to change the default settings, go to settings page,and choose menu Welcome Visitor. 
 
