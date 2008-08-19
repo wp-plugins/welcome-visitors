@@ -1,4 +1,4 @@
-<?
+<?php
 	load_plugin_textdomain('welcome_visitor', 'wp-content/plugins/welcome_visitor'); 
 	include_once('welcome_visitor.php');
 	init_welcome_visitor();
