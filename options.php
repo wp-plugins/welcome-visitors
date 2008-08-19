@@ -1,4 +1,4 @@
-<?
+<?php
 	load_plugin_textdomain('welcome_visitors', 'wp-content/plugins/welcome-visitors'); 
 	include_once('welcome_visitor.php');
 	init_welcome_visitor();
@@ -11,9 +11,7 @@
 	if ('process' == $_POST['stage']) {
  		 update_option('welcome_visitor_css_style', $_POST['welcome_visitor_css_style']);
  		 update_option('rss_address', $_POST['rss_address']);
-		 update_option('welcome_words',$_POST['welcome_words']);
- 		 
- 		
+		 update_option('welcome_words',$_POST['welcome_words']); 		
 	}
 	if($_POST[reset_all]==true){
 		reset_all_options();
@@ -27,7 +25,7 @@
 ?>
 <div class="wrap"> 
   <h2><?php _e('Welcome Visitor Options', 'welcome_visitor') ?></h2> 
-  <form name="form1" method="post" action="<? echo $_SERVER["REQUEST_URI"] ?>&amp;updated=true">
+  <form name="form1" method="post" action="<?php echo $_SERVER["REQUEST_URI"] ?>&amp;updated=true">
   	<input type="hidden" name="stage" value="process" />
   
     <p class="submit">
