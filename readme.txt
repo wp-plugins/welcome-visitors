@@ -4,7 +4,7 @@ Donate link: http://www.kylogs.com/blog/archives/425.html
 Tags: rss, welcome visitors,hello,post
 Requires at least: 2.5.0
 Tested up to: 2.6.0
-Stable tag: 1.02
+Stable tag: 1.03
 
 Welcome-visitor is a wordpress plugin, which will welcome visitors help you to get more readers and more attention! 
 
